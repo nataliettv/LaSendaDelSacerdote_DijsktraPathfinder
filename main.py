@@ -196,7 +196,7 @@ def ejecutar_partida(config):
     senda = elegir_senda(config)
     limite = config.get("limite_profundidad", 20)
 
-    print(f"\nLímite de profundidad: {limite} rondas")
+    #print(f"\nLímite de profundidad: {limite} rondas")
 
     inicial = estado_inicial(senda)
     print(f"\nEstado inicial:")
@@ -212,9 +212,7 @@ def ejecutar_partida(config):
     print(f"  Tiempo: {t1 - t0:.3f} s")
 
     if meta is None:
-        print("\n✗ No se encontró solución dentro del límite de profundidad.")
-        print("  Intenta aumentar 'limite_profundidad' en data.json")
-        print("  o probar con una senda distinta.")
+        print("\n✗ NO SE ENCONTRÓ SOLUCION, INTENTA NUEVAMENTE.")
         return
 
     camino = reconstruir_camino(meta, padre)
@@ -227,9 +225,9 @@ def ejecutar_partida(config):
         imprimir_ronda_debug(i, desc, estados[i - 1], est_fin)
 
     imprimir_separador("Resumen")
-    print(f"  Rondas mínimas   : {len(camino)}")
-    print(f"  Estados visitados: {len(dist):,}")
-    print(f"  Tiempo total     : {t1 - t0:.3f} s")
+    print(f"  RONDAS MINIMAS   : {len(camino)}")
+    print(f"  ESTADOS VISITADOS: {len(dist):,}")
+    print(f"  TIEMPO TOTAL     : {t1 - t0:.3f} s")
     print()
 
 
