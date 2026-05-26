@@ -1,0 +1,28 @@
+{
+  "_descripcion": "Configuración del juego La Senda del Sacerdote",
+
+  "_notas": [
+    "El juego oficial usa 14 cartas. Con 14 cartas el espacio de estados es enorme.",
+    "Para demostrar Dijkstra en una computadora típica conviene usar sendas más cortas.",
+    "El algoritmo es exactamente el mismo; solo cambia el tamaño del tablero."
+  ],
+
+  "_maestros":                       [5, 7, 8, 9, 10, 12, 13, 14],
+  "_falsos_maestros":                [1, 2, 3, 4, 6, 11],
+  "_orden_falsos_maestros_por_turno":[1, 2, 3, 4, 6, 11],
+
+  "senda_inicial": [14, 7, 6, 12, 5, 4, 10, 8, 11, 3, 2, 9, 1, 13],
+
+  "_ejemplos_alternativos": {
+    "mini":     [8, 5, 10, 1],
+    "pequena":  [3, 8, 1, 12, 6, 5],
+    "mediana":  [3, 8, 1, 12, 6, 5, 10, 7],
+    "completa": [14, 7, 6, 12, 5, 4, 10, 8, 11, 3, 2, 9, 1, 13]
+  },
+
+  "limite_profundidad": 20,
+
+  "randomizar": true,
+  "usar_semilla": false,
+  "semilla": 42
+}
